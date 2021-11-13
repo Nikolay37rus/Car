@@ -1,5 +1,6 @@
 ﻿using Profile;
 using UnityEngine;
+using UnityEngine.Advertisements;
 
 public class MainMenuController : BaseController
 {
@@ -25,5 +26,8 @@ public class MainMenuController : BaseController
     private void StartGame()
     {
         _profilePlayer.CurrentState.Value = GameState.Game;
+        _profilePlayer.AnalyticTools.SendMessage("start_game", ("time", Time.realtimeSinceStartup));
+        _profilePlayer.AdsShower.ShowBaner();
+        Advertisement.AddListener(_profilePlayer.AdsListener);
     }
 }

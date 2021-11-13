@@ -1,5 +1,5 @@
-﻿namespace Profile
-{
+﻿
+
     public class Car
     {
         public float Speed { get; private set; }
@@ -8,4 +8,4 @@
             Speed = speed;
         }
     }
-} 
+ 

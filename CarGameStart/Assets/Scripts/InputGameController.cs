@@ -1,4 +1,7 @@
-﻿namespace Game.InputLogic
+﻿using Tools;
+using UnityEngine;
+
+namespace Game.InputLogic
 {
     internal class InputGameController : BaseController
     {
@@ -14,7 +17,7 @@
         private BaseInputView LoadView()
         {
             GameObject objView = Object.Instantiate(ResourceLoader.LoadPrefab(_viewPath));
-            AddGameObjects(objView);
+            AddGameObject(objView);
             return objView.GetComponent<BaseInputView>();
         }
     }
