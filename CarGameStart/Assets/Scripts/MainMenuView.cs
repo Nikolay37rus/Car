@@ -12,7 +12,7 @@ public class MainMenuView : MonoBehaviour
         _buttonStart.onClick.AddListener(statGame);
     }
 
-    private void OneDestroy()
+    private void OnDestroy()
     {
         _buttonStart.onClick.RemoveAllListeners();
     }
