@@ -1,20 +1,10 @@
 ﻿using System;
 
-namespace Tools
-{
-    internal interface IReadOnlySubscriptionProperty<T>
-    {
-        T Value { get; }
-        void SubscribeOnChange(Action<T> subscriptionAction);
-        void UnSubscriptionOnChange(Action<T> unsubscriptionAction);
-    }
-}
-
 
 
 namespace Tools
 {
-    internal class SubscriptionProperty<T> : IReadOnlySubscriptionProperty<T>
+    public class SubscriptionProperty<T> : IReadOnlySubscriptionProperty<T>
     {
         private T _value;
         private Action<T> _onChangeValue;

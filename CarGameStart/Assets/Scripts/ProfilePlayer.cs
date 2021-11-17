@@ -6,14 +6,14 @@ public class ProfilePlayer
 {
    public ProfilePlayer(float speedCar, UnityAdsTools unityAdsTools)
     {
-        CurrentState = new SubscribeProperty<GameState>();
+        CurrentState = new SubscriptionProperty<GameState>();
         CurrentCar = new Car(speedCar);
         AnalyticTools = new UnityAnalytikTools();
         AdsShower = unityAdsTools;
         AdsListener = unityAdsTools;
     }
 
-    public SubscribeProperty<GameState> CurrentState { get; }
+    public SubscriptionProperty<GameState> CurrentState { get; }
 
 
     public Car CurrentCar { get; }

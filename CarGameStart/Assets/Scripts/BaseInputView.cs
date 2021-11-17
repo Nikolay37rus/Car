@@ -1,12 +1,12 @@
-﻿using static UnityEditor.Tools;
+﻿
 using UnityEngine;
 using Tools;
 
-namespace Game.InputLogic
-{
-    internal abstract class BaseInputView : MonoBehaviour
+
+
+    public abstract class  BaseInputView : MonoBehaviour
     {
-        public void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
+        public virtual void Init (SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
         {
             _leftMove = leftMove;
             _rightMove = rightMove;
@@ -28,5 +28,5 @@ namespace Game.InputLogic
             _rightMove.Value = value;
         }
     }
-}
+
 

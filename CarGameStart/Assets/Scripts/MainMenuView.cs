@@ -7,12 +7,12 @@ public class MainMenuView : MonoBehaviour
     [SerializeField]
     private Button _buttonStart;
 
-    public void Init(UnityAction statGame)
+    public void Init(UnityAction startGame)
     {
-        _buttonStart.onClick.AddListener(statGame);
+        _buttonStart.onClick.AddListener(startGame);
     }
 
-    private void OnDestroy()
+    protected void OnDestroy()
     {
         _buttonStart.onClick.RemoveAllListeners();
     }

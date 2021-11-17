@@ -1,9 +1,9 @@
 ﻿using Tools;
 using UnityEngine;
 
-namespace Game.InputLogic
-{
-    internal class InputGameController : BaseController
+
+
+    public class InputGameController : BaseController
     {
         public InputGameController(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, Car car)
         {
@@ -21,4 +21,4 @@ namespace Game.InputLogic
             return objView.GetComponent<BaseInputView>();
         }
     }
-}
+

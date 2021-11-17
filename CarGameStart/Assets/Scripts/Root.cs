@@ -1,4 +1,5 @@
 ﻿using Profile;
+using System.Linq;
 using UnityEngine;
 
 public class Root : MonoBehaviour
@@ -10,13 +11,16 @@ public class Root : MonoBehaviour
     [SerializeField]
     private UnityAdsTools _unityAdsTools;
 
-    private MainMenuController _mainController;
+    [SerializeField]
+    private ItemConfig[] _itemsConfig;
+
+    private MainController _mainController;
 
     private void Awake()
     {
         var profilePlayer = new ProfilePlayer(15f, _unityAdsTools);
         profilePlayer.CurrentState.Value = GameState.Start;
-        _mainController = new MainMenuController(_placeForUi, profilePlayer);
+        _mainController = new MainController(_placeForUi, profilePlayer, _itemsConfig.ToList());
     }
 
     protected void OcDestroy()

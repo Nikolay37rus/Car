@@ -1,6 +1,7 @@
 ﻿using JoostenProductions;
 using Tools;
 using UnityEngine;
+using Game.InputLogic;
 
 public class InputAcceleration : BaseInputView
 {
