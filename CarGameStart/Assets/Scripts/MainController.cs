@@ -24,8 +24,9 @@ public class MainController : BaseController
 
     protected override void OnDispose()
     {
-        _mainMenuController?.Dispose();
-        _gameController?.Dispose();
+        AllClear();
+
+        
         _profilePlayer.CurrentState.UnSubscriptionOnChange(OnChangeGameState);
         base.OnDispose();
     }
@@ -48,11 +49,18 @@ public class MainController : BaseController
                 _mainMenuController?.Dispose();
                 break;
 
-            default:
-                _mainMenuController?.Dispose();
-                _gameController?.Dispose();
-                _inventoryController?.Dispose();
+            default:                
+                AllClear();
                 break;
+
+                
         }
+    }
+
+    private void AllClear()
+    {
+        _mainMenuController?.Dispose();
+        _gameController?.Dispose();
+        _inventoryController?.Dispose();
     }
 }

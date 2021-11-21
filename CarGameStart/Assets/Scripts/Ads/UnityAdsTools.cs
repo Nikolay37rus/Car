@@ -35,12 +35,12 @@ public class UnityAdsTools : MonoBehaviour, IAdsShower, IUnityAdsListener
 
     public void OnUnityAdsDidError(string message)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void OnUnityAdsDidStart(string placementId)
     {
-        throw new System.NotImplementedException();
+       
     }
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IInventoryModel 
 {
-    IReadOnlyList<IItem> GetEquippedItem();
+    IReadOnlyList<IItem> GetEquippedItems();
     void EquipItem(IItem item);
 
     void UnEquipItem(IItem item);

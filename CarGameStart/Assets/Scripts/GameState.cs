@@ -1,7 +1,11 @@
-﻿
-public enum GameState 
+﻿namespace Profile
 {
-  None,
-  Start,
-  Game
+    public enum GameState
+    {
+        None,
+        Start,
+        Game
+    }
+
 }
+

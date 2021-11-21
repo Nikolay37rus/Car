@@ -7,7 +7,7 @@ public class InventoryModel : IInventoryModel
     private readonly List<IItem> _items = new List<IItem>();
 
 
-    public IReadOnlyList<IItem> GetEquippedItem()
+    public IReadOnlyList<IItem> GetEquippedItems()
     {
         return _items;
     }
