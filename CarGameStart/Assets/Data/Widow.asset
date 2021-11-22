@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e035b4a6928d2b244995383996e39ed7, type: 3}
   m_Name: Widow
   m_EditorClassIdentifier: 
-  _id: 0
-  _title: 
+  _id: 1
+  _title: Window

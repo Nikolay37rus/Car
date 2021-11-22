@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeItemConfig
   _itemConfig: {fileID: 11400000, guid: 5829e677f0d3ff84f9505883f43b9762, type: 2}
   _upgradeType: 1
-  _valueUpgrade: 19
+  _valueUpgrade: 10
